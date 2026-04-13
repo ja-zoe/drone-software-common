@@ -1,3 +1,5 @@
+#pragma once
+
 typedef struct {
   uint8_t arm_disarm;
   uint8_t spdt_l;
