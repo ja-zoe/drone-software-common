@@ -9,17 +9,17 @@ typedef struct {
 } switch_states_t;
 
 typedef struct {
-  int16_t lx;
-  int16_t ly;
-  int16_t rx;
-  int16_t ry;
+  int16_t yaw;
+  int16_t throttle;
+  int16_t roll;
+  int16_t pitch;
 } joysticks_values_t;
 
-typedef struct __attribute__((packed)) {
+typedef struct {
   joysticks_values_t joysticks_values;
   switch_states_t switches_values;
 } control_packet_t;
 
-typedef struct __attribute__((packed)) {
+typedef struct {
 
 } telemetry_packet_t;
