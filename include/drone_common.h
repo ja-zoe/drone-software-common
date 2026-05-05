@@ -1,6 +1,9 @@
 #pragma once
 #include <stdint.h>
 
+#define STICK_OUT_MIN 0
+#define STICK_OUT_MAX 2000
+
 typedef struct {
   uint8_t arm_disarm;
   uint8_t spdt_l;
