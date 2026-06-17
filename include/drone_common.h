@@ -2,14 +2,19 @@
 #include <stdint.h>
 
 #define STICK_OUT_MIN 0
-#define STICK_OUT_MAX 2000
+#define STICK_OUT_MAX 5000
 
+typedef enum {
+  SW_OFF = 0,
+  SW_ON  = 1,
+  SW_MID = 2
+} SwitchState;
 typedef struct {
-  uint8_t arm_disarm;
-  uint8_t spdt_l;
-  uint8_t spdt_r;
-  uint8_t sp3t_l;
-  uint8_t sp3t_r;
+  SwitchState arm_disarm;
+  SwitchState spdt_l;
+  SwitchState spdt_r;
+  SwitchState sp3t_l;
+  SwitchState sp3t_r;
 } switch_states_t;
 
 typedef struct {
